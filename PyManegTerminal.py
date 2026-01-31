@@ -27,19 +27,23 @@ while True:
     if act == '3':
         endless = True
         openprojectname = input('Enter project name: ')
-        print('Project: ' + openprojectname + '\n1.Open main.py\n2.Open file\n3.New file\n0.Exit')
+        print('\nProject: ' + openprojectname + '\n1.Open main.py\n2.Open file\n3.New file\n0.Exit')
         if endless == True:
             actinopenproject = input('>>')
             if actinopenproject == "1":
                 os.system('nvim ~/PythonProjects/' + openprojectname +  'main.py')
+                print('Succesfully!')
                 actinopenproject = input('>>')
             if actinopenproject == "2":
                 openfileipname = input('Enter file name: ')
                 os.system('nvim ~/PythonProjects/' + openprojectname + "/" + openfileipname + '.py')
+                print('Successfully!')
                 actinopenproject = input('>>')
             if actinopenproject == "3":
                 newfileipname = input('Enter file name: ')
                 os.system('touch ~/PythonProjects/' + openprojectname + '/' + newfileipname + '.py')
+                print('Successfully!')
+                actinopenproject = input('>>')
             if actinopenproject == "0":
                 endless = False
 
